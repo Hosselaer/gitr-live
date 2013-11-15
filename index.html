@@ -1,0 +1,439 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>GITR</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<link rel="stylesheet" href="themes/GITR.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+	<style>
+    .intro { font-weight: bold; }
+  </style>
+</head> 
+<body>
+
+<div data-role="page" id="signup">
+
+	<div data-role="header" data-theme="a" >
+    <div align="center">
+      <img src="tekst.png" width="90%" />
+    </div>
+	</div>
+
+	<div data-role="content" data-theme="a">	
+    <form action="#" method="GET" id="registratiedata">
+      <label for="voornaam">First Name</label><input required id="voornaam" maxlength="40" name="voornaam" size="20" type="text" data-theme="b" />
+      <label for="achternaam">Last Name</label><input required  id="achternaam" maxlength="80" name="achternaam" size="20" type="text" data-theme="b" />
+      <label for="emailadres">Email</label><input required id="emailadres" maxlength="80" name="emailadres" size="20" type="text" data-theme="b" />
+    </form>
+    <br>
+    <a href="#" data-role="button" data-theme="a" id="signup_button">Register</a>
+	</div>
+	
+	<div data-role="footer" data-theme="a" style='background: white'>
+    <br>
+    <img title="ING" src="ING.jpg" />
+    <img title="BDO" src="BDO.jpg" />
+    <img title="NH" src="nh.png"   />
+	</div>
+  
+</div>
+
+<!-----------------------------------------------------------------------------> 
+
+<div data-role="page" id="home" data-theme="a" >
+
+	<div data-role="header" data-theme="a" >
+    <div align="center">
+      <img src="tekst.png" width="90%" />
+    </div>
+	</div>
+
+	<div data-role="content" data-theme="a" >	
+		<p class="intro">Click on the button below to start investing or vote for the winner</p>
+		<!-- div data-role="controlgroup" data-type="horizontal" -->
+		<p>
+      <a href="#invest" data-role="button" data-theme="a" data-transition="slide">Start Investing</a>
+      <a href="#vote" data-role="button" data-theme="a" data-transition="slide">Vote for Winner</a>
+    </p>	
+    <!-- /div -->
+	</div>
+
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a" >		
+    <div data-role="navbar" data-theme="a">
+      <ul>
+        <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist" data-theme="a" >Home</a></li>
+        <li><a href="#invest" data-icon="arrow-d" data-theme="a" >Invest</a></li>
+        <li><a href="#vote" data-icon="check" data-theme="a" >Vote</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+<!----------------------------------------------------------------------------->
+
+<div data-role="page" id="invest" data-theme="a" >
+
+	<div data-role="header" data-theme="a" >
+		<h1>INVEST</h1>
+	</div>
+
+	<div data-role="content" data-theme="a" >	
+		<p class="intro">Click on the startup for more information, click on invest to start investing</p>
+    <div data-role="collapsible-set" data-inset="false" data-theme="a">
+    
+      <!-- id van div moet hetzelfde zijn als op symbid.nl -->
+      <div data-role="collapsible" id="3152-beter-eten-beter-leven" data-theme="a" class="startup-info">
+      <h3 class="startup-title" data-theme="a">Beebox</h3>
+      <p>Wekelijks een box met biologische producten direct van de Nederlandse boer bij jou aan huis. Vers, puur, smaakvol, inspirerend, betaalbaar en van topkwaliteit.</p>
+      <a href="#choose-investment" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest in this startup</a>
+      <a href="#over-25k" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest over &euro;25.000</a>
+      </div>
+      
+      <div data-role="collapsible" id="4464-kasco-goed-voor-elkaar" data-theme="a" class="startup-info">
+      <h3 class="startup-title" data-theme="a">KasCo</h3>
+      <p>KasCoöperatie is een online facturatie- en incassodienst die ervoor zorgt dat ondernemers sneller en eenvoudiger betaald worden. Door de krachten te bundelen in een coöperatie, besparen de leden van KasCo een hoop tijd en zijn zij door het unieke verdienmodel verzekerd van professioneel debiteurenbeheer zonder dat dit veel geld kost.
+Omdat KasCo online facturatie, incasso en juridische dienstverlening combineert, worden betalingsproblemen voorkomen. KasCo is, omdat zij vanaf het eerste moment betrokken is bij de factuur, zeer goed in staat betalingsrisico’s in te schatten. Door het unieke verdienmodel wordt KasCo voor het voorkomen van deze problemen beloond.</p>
+      <a href="#choose-investment" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest in this startup</a>
+      <a href="#over-25k" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest over &euro;25.000</a>
+      </div>
+      
+      <div data-role="collapsible" data-theme="a">
+      <h3 class="startup-title" id="1860-stad-nl-de-internet-stad" data-theme="a" class="startup-info">Stad.nl</h3>
+      <p>Stad.nl is de nieuwe Nederlandse winkelstad op het internet. Je kunt er heerlijk struinen door de vele straten, zoals de Modegracht, het kinderlaantje en de Sieradensteeg. Zo ontdek je bijzondere en leuke winkeltjes die service en aandacht hoog in het vaandel hebben staan. In iedere winkel vind je vriendelijk personeel, een kast vol bijzondere spullen en allerlei leuke diensten zoals de mogelijkheid om de winkel een hartje te geven en in je eigen straat te plaatsen. Verder heeft de stad nog een uitgebreide stadskrant met het volledige productaanbod, de laatste nieuwtjes, acties en een agenda waar alle stadsactiviteiten in staan zoals de woensdagkoopavond en de Kerstmarkt.</p>
+      <a href="#choose-investment" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest in this startup</a>
+      <a href="#over-25k" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest over &euro;25.000</a>
+      </div>
+      
+    </div>
+	</div>
+
+  <div data-role="footer" data-theme="a" data-id="home" data-position="fixed">		
+    <div data-role="navbar" data-theme="a">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#invest" data-icon="arrow-d" class="ui-btn-active ui-state-persist">Invest</a></li>
+        <li><a href="#vote" data-icon="check">Vote</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+<!----------------------------------------------------------------------------->
+
+<div data-role="page" id="vote" data-theme="a">
+
+	<div data-role="header" data-theme="a">
+		<h1>VOTE</h1>
+	</div>
+
+	<div data-role="content" data-theme="a">	
+		<p class="intro">Please select the battle you want to vote for</p><br>
+		<ul data-role="listview" data-theme="a">
+      <li><a href="#" class="vote-link" data-transition="slide">Battle A</a></li>
+      <li><a href="#" class="vote-link" data-transition="slide">Battle B</a></li>
+      <li><a href="#" class="vote-link" data-transition="slide">Battle C</a></li>
+      <li><a href="#" class="vote-link" data-transition="slide">Battle D</a></li>
+    </ul>
+    <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" data-theme="a" id="voting-form">
+      <input type=hidden name="oid" value="00DA0000000amZU" >
+      <input type=hidden name="retURL" value="http://eec.eu01.aws.af.cm/#voted">
+      <input type=hidden name="Campaign_ID" value="701F0000000Qq3g">
+      <input name="first_name" type="hidden" />
+      <input name="last_name" type="hidden" />
+      <input name="email" type="hidden" />
+      <input name="00NF00000064HV9" type="hidden" /> <!-- 00NF00000064HV9 = GITR invest startup -->
+    </form> 
+	</div>
+
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">		
+    <div data-role="navbar" data-theme="a">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#invest" data-icon="arrow-d">Invest</a></li>
+        <li><a href="#vote" data-icon="check" class="ui-btn-active ui-state-persist">Vote</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+<!----------------------------------------------------------------------------->
+
+<div data-role="page" id="voted" data-theme="a">
+
+	<div data-role="header" data-theme="a">
+		<h1>VOTE</h1>
+	</div>
+
+	<div data-role="content" data-theme="a">	
+		<p class="intro">Thank you for voting!</p>
+		<p>Why not also invest in a startup?</p>
+		<a href="#invest" data-role="button" data-theme="a" data-transition="slide">Invest!</a>
+	</div>
+
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">		
+    <div data-role="navbar" data-theme="a">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#invest" data-icon="arrow-d">Invest</a></li>
+        <li><a href="#vote" data-icon="check" class="ui-btn-active ui-state-persist">Vote</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+<!----------------------------------------------------------------------------->
+
+<div data-role="page" id="invested" data-theme="a">
+
+	<div data-role="header" data-theme="a">
+		<h1>INVESTED</h1>
+	</div>
+
+	<div data-role="content" data-theme="a">	
+		<p class="intro">Thank you!</p>
+		<p>An email has been sent to your account. Click on the link in this email to finish the payment.</p>
+		<p>Why not also invest in another startup?</p>
+		<a href="#invest" data-role="button" data-theme="a" data-transition="slide">Invest more</a>
+	</div>
+
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">		
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#invest" data-icon="arrow-d" class="ui-btn-active ui-state-persist">Invest</a></li>
+        <li><a href="#vote" data-icon="check">Vote</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+<!----------------------------------------------------------------------------->
+
+<div data-role="page" id="choose-investment" data-theme="a">
+
+	<div data-role="header" data-theme="a">
+		<h1>INVEST</h1>
+	</div>
+
+	<div data-role="content" data-theme="a">	
+		<p class="intro">How much would you like to invest?</p>
+    <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" data-theme="a" id="choose-investment-form">
+      <input type=hidden name="oid" value="00DA0000000amZU">
+      <input type=hidden name="retURL" value="http://eec.eu01.aws.af.cm/index.html#invested">
+      <input type=hidden name="Campaign_ID" value="701F0000000Qpm1">
+      <input name="first_name" type="hidden" />
+      <input name="last_name" type="hidden" />
+      <input name="email" type="hidden" />
+      <input name="00NF00000064HV9" type="hidden" /> <!-- 00NF00000064HV9 = GITR invest startup -->
+
+      <div id="investment-slider">
+        <div data-role="controlgroup" data-theme="a">
+          <a href="#" data-role="button" data-icon="arrow-u" data-iconpos="notext" id="share-u">Add share</a>
+        </div>
+        <div>
+          <label style="display: inline;" for="00NF00000064HV4">€</label> <!-- 00NF00000064HV4 = GITR invest euro amount -->
+          <!-- niet meer dan 93% --> 
+          <input style="display: inline; width: 93%;" data-theme="b" type="number" name="00NF00000064HV4" id="00NF00000064HV4" placeholder="please fill in an amount" value="20" min="20" max="25000"/>
+        </div>
+        <div data-role="controlgroup" data-theme="a">
+          <a href="#" data-role="button" data-icon="arrow-d" data-iconpos="notext" id="share-d">Remove share</a>
+        </div>
+      </div>
+      <p><span id="shares-percentage"></span>% of shares</p>
+      <input type="submit" name="submit" value="Finish Investment">
+    </form> 
+	</div>
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">		
+    <div data-role="navbar" data-theme="a">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#invest" data-icon="arrow-d" class="ui-btn-active ui-state-persist">Invest</a></li>
+        <li><a href="#vote" data-icon="check">Vote</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+<!----------------------------------------------------------------------------->
+
+<div data-role="page" id="over-25k" data-theme="a">
+
+	<div data-role="header" data-theme="a">
+		<h1>INVEST</h1>
+	</div>
+
+	<div data-role="content" data-theme="a">	
+		<p class="intro">Please confirm if you want to invest over &euro;25K</p>
+    <p>We will inform the startup about your interest and bring you in contact with them</p>
+    <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" data-ajax="false" data-theme="a" id="over-25k-form">
+      <input type=hidden name="oid" value="00DA0000000amZU">
+      <input type=hidden name="retURL" value="http://eec.eu01.aws.af.cm/index.html#invested">
+      <input type=hidden name="Campaign_ID" value="701F0000000Qpm1">
+      <input name="first_name" type="hidden" />
+      <input name="last_name"  type="hidden" />
+      <input name="email" type="hidden" />
+      <input name="00NF00000064HV9" type="hidden" /> <!-- 00NF00000064HV9 = GITR invest startup --> 
+      <label for="00NF00000064HV4">Fill in the amount you want to invest:</label> <!-- 00NF00000064HV4 = GITR invest euro amount -->
+      <input type="number" data-theme="b" name="00NF00000064HV4" id="over-25k-amount" value="25000" required />
+      <label for="phone">Your phone number:</label>
+      <input type="text" data-theme="b" name="phone" value="" required />
+      <label for="00NF000000643LR">Any extra details you want to share:</label> <!--00NF000000643LR = GITR additional information -->
+      <textarea name="00NF000000643LR"  data-theme="b" placeholder="optional"></textarea>
+		<input type="submit" name="submit" value="Confirm">
+	</div>
+
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">		
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#invest" data-icon="arrow-d" class="ui-btn-active ui-state-persist">Invest</a></li>
+        <li><a href="#vote" data-icon="check">Vote</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+<!----------------------------------------------------------------------------->
+
+<div data-role="page" id="reset" data-theme="a">
+
+	<div data-role="header" data-theme="a">
+		<h1>RESET</h1>
+	</div>
+
+	<div data-role="content" data-theme="a">	
+		<p><a href="index.html" title="Reset">Reset</a></p>
+	</div>
+
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">		
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#invest" data-icon="arrow-d" class="ui-btn-active ui-state-persist">Invest</a></li>
+        <li><a href="#vote" data-icon="check">Vote</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+<script type="text/javascript">
+
+// als al ingegeschreven dan naar hoofdpagina
+// TODO: reset localStorage page
+//$("#signup").bind("pageinit", function() {
+//  if(localStorage.getItem("fname")!=null &&
+//     localStorage.getItem("lname")!=null &&
+//     localStorage.getItem("email")!=null
+//   ) {
+//    $.mobile.changePage( "#home", { transition: "none" } );
+//  }
+//});
+
+// alles ingevuld bij inschrijven?
+$("#signup_button").click(function() {
+  var filledin = true;
+  $("#registratiedata input").each(function() {
+    if($(this).val()=="") {
+      filledin = false;
+      $(this).focus();
+      $(this).attr("placeholder", "Please fill in this field");   
+    }
+  });
+
+// alles ingevuld, sla login op en ga naar hoofdpagina
+  if(filledin) {
+    localStorage.setItem( "fname", $( "#voornaam" ).val() );
+    localStorage.setItem( "lname", $( "#achternaam" ).val() );
+    localStorage.setItem( "email", $( "#emailadres" ).val() );
+    $.mobile.changePage(  "#home", { transition: "slide" } );
+  }
+  
+});
+
+// elk formulier krijgt deze gegevens (de login gegevens en de gekozen startup) er nog bij
+$("#choose-investment, #over-25k, #vote").bind("pageinit", function() { 
+  $("input[name='first_name']").val(      localStorage.getItem( "fname" ) );
+  $("input[name='last_name']").val(       localStorage.getItem( "lname" ) );
+  $("input[name='email']").val(           localStorage.getItem( "email" ) );
+  $("input[name='00NF00000064HV9']").val( localStorage.getItem( "startup" ) );
+});
+
+// als startup gekozen dan opslaan 
+$("a[href='#choose-investment']").click( function(){
+  var startup = $(this).parents(".startup-info").first().attr("id");
+  localStorage.setItem( "startup", startup );
+});
+
+$(".vote-link").click( function() {
+  $("input[name='00NF00000064HV9']").val( this.innerText );
+  $("#voting-form").submit();
+});
+
+$("#share-u").click(function() {
+  var shares = $("#00NF00000064HV4");
+  shares.val(parseInt(shares.val())+20);
+  var percentage = parseInt(shares.val())/10000 * 100;
+  $("#shares-percentage").text(percentage.toPrecision(3));
+});
+
+$("#share-d").click(function() {
+  var shares = $("#00NF00000064HV4");
+  shares.val(parseInt(shares.val())-20);
+  if (parseInt(shares.val())<20) {
+    shares.val("20");
+   }
+  var percentage = parseInt(shares.val())/10000 * 100;
+  $("#shares-percentage").text(percentage.toPrecision(3));
+});
+
+$("#00NF00000064HV4").change( function() {
+   var shares = $("#00NF00000064HV4");
+   if (parseInt(shares.val())<0) {
+    shares.val("20");
+   }
+   if (parseInt(shares.val()) % 20 != 0) {
+    shares.val(
+      Math.ceil(parseInt(shares.val())/20)*20
+    );
+   }
+   
+  var percentage = parseInt(shares.val())/10000 * 100;
+  $("#shares-percentage").text(percentage.toPrecision(3));
+
+});
+
+
+
+//$("#invest").bind("pageinit", function() {
+//  $(".startup-info").each( function() {
+//  	$.getJSON('api.php', {id: this.id}, function(json) {
+      //amount of investors
+      //$(this).find(".investors_amount").html(json.idea.idea_investors.amount);
+      //investment required;
+      //$(this).find(".target_funding").html("&euro;"+ json.idea.target_funding);
+      //current investments;
+      //$(this).find(".invested_funding").html("&euro;"+ json.idea.invested_funding);
+      //days remaining till deadline
+      //$(this).find(".days_till_deadline").text(json.idea.days_till_deadline);
+      //progress
+      //var  progress = Math.round((json.idea.invested_funding / json.idea.target_funding) * 100);
+      //$(this).find(".equity_percentage").text(progress+"%");
+      //$(this).find(".progress").css("width", progress+"%");
+      //$(this).find(".equity_inner_container").css("width", progress+"%");
+//    });
+//  });
+//});
+
+//replace(/\W+/g,"-");
+</script>
+</body>
+</html>

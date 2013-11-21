@@ -23,9 +23,9 @@
 
 	<div data-role="content" data-theme="a">	
     <form action="#" method="GET" id="registratiedata">
-      <label for="voornaam">First Name</label><input required id="voornaam" maxlength="40" name="voornaam" size="20" type="text" data-theme="b" />
-      <label for="achternaam">Last Name</label><input required  id="achternaam" maxlength="80" name="achternaam" size="20" type="text" data-theme="b" />
-      <label for="emailadres">Email</label><input required id="emailadres" maxlength="80" name="emailadres" size="20" type="text" data-theme="b" />
+      <label for="voornaam">First Name</label><input required id="voornaam" class="required" maxlength="40" name="voornaam" size="20" type="text" data-theme="b" />
+      <label for="achternaam">Last Name</label><input required  id="achternaam" class="required" maxlength="80" name="achternaam" size="20" type="text" data-theme="b" />
+      <label for="emailadres">Email</label><input required id="emailadres" class="required" maxlength="80" name="emailadres" size="20" type="text" data-theme="b" />
     </form>
     <br>
     <a href="#" data-role="button" data-theme="a" id="signup_button">Register</a>
@@ -54,13 +54,19 @@
 		<p class="intro">Click on the button below to start investing or vote for the winner</p>
 		<!-- div data-role="controlgroup" data-type="horizontal" -->
 		<p>
-      <a href="#invest" data-role="button" data-theme="a" data-transition="slide">Start Investing</a>
-      <a href="#vote" data-role="button" data-theme="a" data-transition="slide">Vote for Winner</a>
+		<a href="#invest" data-role="button" data-theme="a" data-transition="slide">Start Investing</a>
+		<a href="#vote" data-role="button" data-theme="a" data-transition="slide">Vote for Winner</a>
+
     </p>	
     <!-- /div -->
 	</div>
 
-  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a" >		
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a" >
+  	<div style='background: white'>
+    <img title="ING" src="ING.jpg" />
+    <img title="BDO" src="BDO.jpg" />
+    <img title="NH" src="nh.png"   />
+	</div>		
     <div data-role="navbar" data-theme="a">
       <ul>
         <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist" data-theme="a" >Home</a></li>
@@ -85,32 +91,52 @@
     <div data-role="collapsible-set" data-inset="false" data-theme="a">
     
       <!-- id van div moet hetzelfde zijn als op symbid.nl -->
-      <div data-role="collapsible" id="3152-beter-eten-beter-leven" data-theme="a" class="startup-info">
-      <h3 class="startup-title" data-theme="a">Beebox</h3>
-      <p>Wekelijks een box met biologische producten direct van de Nederlandse boer bij jou aan huis. Vers, puur, smaakvol, inspirerend, betaalbaar en van topkwaliteit.</p>
-      <a href="#choose-investment" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest in this startup</a>
-      <a href="#over-25k" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest over &euro;25.000</a>
+      <div data-role="collapsible" id="4792-declaree-app-voor-bonnetjes" data-theme="a" class="startup-info">
+      <h3 class="startup-title" data-theme="a">Declaree</h3>
+      <p>Sick and tired of keeping track of receipts? Digitalize them on the go with Declaree, 
+      the Expense Management solution that tracks receipts using a mobile app available for 
+      iPhone and Android. All receipts are stored in the secure Declaree webapplication which 
+      offers workflows and budgeting options, easily connects to accounting systems, provides 
+      immediate reimbursement and has specific packages for companies of all sizes.</p>
+      <a href="#choose-investment" data-gitrid="4792-declaree-app-voor-bonnetjes" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest in this startup</a>
+      <a href="#over-25k" data-gitrid="4792-declaree-app-voor-bonnetjes" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest over &euro;25.000</a>
       </div>
       
       <div data-role="collapsible" id="4464-kasco-goed-voor-elkaar" data-theme="a" class="startup-info">
       <h3 class="startup-title" data-theme="a">KasCo</h3>
-      <p>KasCoöperatie is een online facturatie- en incassodienst die ervoor zorgt dat ondernemers sneller en eenvoudiger betaald worden. Door de krachten te bundelen in een coöperatie, besparen de leden van KasCo een hoop tijd en zijn zij door het unieke verdienmodel verzekerd van professioneel debiteurenbeheer zonder dat dit veel geld kost.
-Omdat KasCo online facturatie, incasso en juridische dienstverlening combineert, worden betalingsproblemen voorkomen. KasCo is, omdat zij vanaf het eerste moment betrokken is bij de factuur, zeer goed in staat betalingsrisico’s in te schatten. Door het unieke verdienmodel wordt KasCo voor het voorkomen van deze problemen beloond.</p>
-      <a href="#choose-investment" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest in this startup</a>
-      <a href="#over-25k" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest over &euro;25.000</a>
+      <p>KasCo is the new collaborative way of billing! 
+      KasCo does not believe in unfriendly payment 
+      reminders but in a cooperative way of billing where 
+      KasCo unites members who save money and time as KasCo 
+      takes care of the entire billing process from A to Z, 
+      including legal requests and the actual transaction of
+       the money. The profit is shared by its members, making 
+       KasCo the only billing service in the world to do this!</p>
+      <a href="#choose-investment" data-gitrid="4464-kasco-goed-voor-elkaar" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest in this startup</a>
+      <a href="#over-25k" data-gitrid="4464-kasco-goed-voor-elkaar" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest over &euro;25.000</a>
       </div>
       
       <div data-role="collapsible" data-theme="a">
-      <h3 class="startup-title" id="1860-stad-nl-de-internet-stad" data-theme="a" class="startup-info">Stad.nl</h3>
-      <p>Stad.nl is de nieuwe Nederlandse winkelstad op het internet. Je kunt er heerlijk struinen door de vele straten, zoals de Modegracht, het kinderlaantje en de Sieradensteeg. Zo ontdek je bijzondere en leuke winkeltjes die service en aandacht hoog in het vaandel hebben staan. In iedere winkel vind je vriendelijk personeel, een kast vol bijzondere spullen en allerlei leuke diensten zoals de mogelijkheid om de winkel een hartje te geven en in je eigen straat te plaatsen. Verder heeft de stad nog een uitgebreide stadskrant met het volledige productaanbod, de laatste nieuwtjes, acties en een agenda waar alle stadsactiviteiten in staan zoals de woensdagkoopavond en de Kerstmarkt.</p>
-      <a href="#choose-investment" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest in this startup</a>
-      <a href="#over-25k" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest over &euro;25.000</a>
+      <h3 class="startup-title" id="4328-maak-een-boeket-online" data-theme="a" class="startup-info">Bloomy Floral Creations</h3>
+      <p>Bloomy Creations is the first and only company in the world that allows
+       consumers to manually choice each flower in a bouquet and have it delivered
+        on their doorstep! Compose your own bouquet, get inspired by others or select
+         the favorite flowers of the receiver? You choose your flowers, your color, 
+         your style or your bouquet and can pick up your creation or delivered.
+          A bouquet that conveys your message/meaning!</p>
+      <a href="#choose-investment" data-gitrid="4328-maak-een-boeket-online" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest in this startup</a>
+      <a href="#over-25k" data-gitrid="4328-maak-een-boeket-online" data-role="button" data-theme="a" data-inline="true" data-transition="slide">Invest over &euro;25.000</a>
       </div>
       
     </div>
 	</div>
 
-  <div data-role="footer" data-theme="a" data-id="home" data-position="fixed">		
+  <div data-role="footer" data-theme="a" data-id="home" data-position="fixed">
+    	<div style='background: white'>
+    <img title="ING" src="ING.jpg" />
+    <img title="BDO" src="BDO.jpg" />
+    <img title="NH" src="nh.png"   />
+	</div>			
     <div data-role="navbar" data-theme="a">
       <ul>
         <li><a href="#home" data-icon="home">Home</a></li>
@@ -131,25 +157,30 @@ Omdat KasCo online facturatie, incasso en juridische dienstverlening combineert,
 	</div>
 
 	<div data-role="content" data-theme="a">	
-		<p class="intro">Please select the battle you want to vote for</p><br>
+		<p class="intro">Please select the option you want to vote for</p><br>
 		<ul data-role="listview" data-theme="a">
-      <li><a href="#" class="vote-link" data-transition="slide">Battle A</a></li>
-      <li><a href="#" class="vote-link" data-transition="slide">Battle B</a></li>
-      <li><a href="#" class="vote-link" data-transition="slide">Battle C</a></li>
-      <li><a href="#" class="vote-link" data-transition="slide">Battle D</a></li>
+      <li><a href="#" class="vote-link" data-transition="slide">Winner: Smadex/Playir</a></li>
+      <li><a href="#" class="vote-link" data-transition="slide">Winner: Jinvator/Mindful Scientific</a></li>
+      <li><a href="#" class="vote-link" data-transition="slide">Winner: Hutgrip/Truckbird</a></li>
+      <li><a href="#" class="vote-link" data-transition="slide">Winner Battle JackSavior/Eyeverify</a></li>
     </ul>
     <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" data-theme="a" id="voting-form">
       <input type=hidden name="oid" value="00DA0000000amZU" >
-      <input type=hidden name="retURL" value="http://eec.eu01.aws.af.cm/#voted">
+      <input type=hidden name="retURL" value="http://www.livegitr.nl/#voted">
       <input type=hidden name="Campaign_ID" value="701F0000000Qq3g">
       <input name="first_name" type="hidden" />
       <input name="last_name" type="hidden" />
       <input name="email" type="hidden" />
       <input name="00NF00000064HV9" type="hidden" /> <!-- 00NF00000064HV9 = GITR invest startup -->
-    </form> 
+    </form>
 	</div>
 
-  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">		
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">
+    	<div style='background: white'>
+    <img title="ING" src="ING.jpg" />
+    <img title="BDO" src="BDO.jpg" />
+    <img title="NH" src="nh.png"   />
+	</div>			
     <div data-role="navbar" data-theme="a">
       <ul>
         <li><a href="#home" data-icon="home">Home</a></li>
@@ -175,7 +206,12 @@ Omdat KasCo online facturatie, incasso en juridische dienstverlening combineert,
 		<a href="#invest" data-role="button" data-theme="a" data-transition="slide">Invest!</a>
 	</div>
 
-  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">		
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">	
+    	<div style='background: white'>
+    <img title="ING" src="ING.jpg" />
+    <img title="BDO" src="BDO.jpg" />
+    <img title="NH" src="nh.png"   />
+	</div>		
     <div data-role="navbar" data-theme="a">
       <ul>
         <li><a href="#home" data-icon="home">Home</a></li>
@@ -200,9 +236,80 @@ Omdat KasCo online facturatie, incasso en juridische dienstverlening combineert,
 		<p>An email has been sent to your account. Click on the link in this email to finish the payment.</p>
 		<p>Why not also invest in another startup?</p>
 		<a href="#invest" data-role="button" data-theme="a" data-transition="slide">Invest more</a>
+
+	</div>
+
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">
+    	<div style='background: white'>
+    <img title="ING" src="ING.jpg" />
+    <img title="BDO" src="BDO.jpg" />
+    <img title="NH" src="nh.png"   />
+	</div>			
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#invest" data-icon="arrow-d" class="ui-btn-active ui-state-persist">Invest</a></li>
+        <li><a href="#vote" data-icon="check">Vote</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+<!----------------------------------------------------------------------------->
+
+<div data-role="page" id="invested" data-theme="a">
+
+	<div data-role="header" data-theme="a">
+		<h1>INVESTED</h1>
+	</div>
+
+	<div data-role="content" data-theme="a">	
+		<p class="intro">Thank you!</p>
+		<p>An email has been sent to your account. Click on the link in this email to finish the payment.</p>
+		<p>Why not also invest in another startup?</p>
+		<a href="#invest" data-role="button" data-theme="a" data-transition="slide">Invest more</a>
+	</div>
+
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">
+    	<div style='background: white'>
+    <img title="ING" src="ING.jpg" />
+    <img title="BDO" src="BDO.jpg" />
+    <img title="NH" src="nh.png"   />
+	</div>			
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#home" data-icon="home">Home</a></li>
+        <li><a href="#invest" data-icon="arrow-d" class="ui-btn-active ui-state-persist">Invest</a></li>
+        <li><a href="#vote" data-icon="check">Vote</a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+<!----------------------------------------------------------------------------->
+
+<div data-role="page" id="invested-over25k" data-theme="a">
+
+	<div data-role="header" data-theme="a">
+		<h1>INVESTED</h1>
+	</div>
+
+	<div data-role="content" data-theme="a">	
+		<p class="intro">Thank you!</p>
+		<p>We will contact you at a later date to bring you in contact with the startup</p>
+		<p>Why not also invest in another startup?</p>
+		<a href="#invest" data-role="button" data-theme="a" data-transition="slide">Invest more</a>
+
 	</div>
 
   <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">		
+    	<div style='background: white'>
+    <img title="ING" src="ING.jpg" />
+    <img title="BDO" src="BDO.jpg" />
+    <img title="NH" src="nh.png"   />
+	</div>	
     <div data-role="navbar">
       <ul>
         <li><a href="#home" data-icon="home">Home</a></li>
@@ -226,7 +333,7 @@ Omdat KasCo online facturatie, incasso en juridische dienstverlening combineert,
 		<p class="intro">How much would you like to invest?</p>
     <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" data-theme="a" id="choose-investment-form">
       <input type=hidden name="oid" value="00DA0000000amZU">
-      <input type=hidden name="retURL" value="http://eec.eu01.aws.af.cm/index.html#invested">
+      <input type=hidden name="retURL" value="http://www.livegitr.nl/index.html#invested">
       <input type=hidden name="Campaign_ID" value="701F0000000Qpm1">
       <input name="first_name" type="hidden" />
       <input name="last_name" type="hidden" />
@@ -238,7 +345,7 @@ Omdat KasCo online facturatie, incasso en juridische dienstverlening combineert,
           <a href="#" data-role="button" data-icon="arrow-u" data-iconpos="notext" id="share-u">Add share</a>
         </div>
         <div>
-          <label style="display: inline;" for="00NF00000064HV4">€</label> <!-- 00NF00000064HV4 = GITR invest euro amount -->
+          <label style="display: inline;" for="00NF00000064HV4">â‚¬</label> <!-- 00NF00000064HV4 = GITR invest euro amount -->
           <!-- niet meer dan 93% --> 
           <input style="display: inline; width: 93%;" data-theme="b" type="number" name="00NF00000064HV4" id="00NF00000064HV4" placeholder="please fill in an amount" value="20" min="20" max="25000"/>
         </div>
@@ -250,7 +357,13 @@ Omdat KasCo online facturatie, incasso en juridische dienstverlening combineert,
       <input type="submit" name="submit" value="Finish Investment">
     </form> 
 	</div>
-  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">		
+	
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">	
+    	<div style='background: white'>
+    <img title="ING" src="ING.jpg" />
+    <img title="BDO" src="BDO.jpg" />
+    <img title="NH" src="nh.png"   />
+	</div>		
     <div data-role="navbar" data-theme="a">
       <ul>
         <li><a href="#home" data-icon="home">Home</a></li>
@@ -275,8 +388,8 @@ Omdat KasCo online facturatie, incasso en juridische dienstverlening combineert,
     <p>We will inform the startup about your interest and bring you in contact with them</p>
     <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" data-ajax="false" data-theme="a" id="over-25k-form">
       <input type=hidden name="oid" value="00DA0000000amZU">
-      <input type=hidden name="retURL" value="http://eec.eu01.aws.af.cm/index.html#invested">
-      <input type=hidden name="Campaign_ID" value="701F0000000Qpm1">
+      <input type=hidden name="retURL" value="http://www.livegitr.nl/index.html#invested-over25k">
+      <input type=hidden name="Campaign_ID" value="701F0000000Qqpe">
       <input name="first_name" type="hidden" />
       <input name="last_name"  type="hidden" />
       <input name="email" type="hidden" />
@@ -288,9 +401,15 @@ Omdat KasCo online facturatie, incasso en juridische dienstverlening combineert,
       <label for="00NF000000643LR">Any extra details you want to share:</label> <!--00NF000000643LR = GITR additional information -->
       <textarea name="00NF000000643LR"  data-theme="b" placeholder="optional"></textarea>
 		<input type="submit" name="submit" value="Confirm">
+	</form>
 	</div>
 
   <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">		
+    	<div style='background: white'>
+    <img title="ING" src="ING.jpg" />
+    <img title="BDO" src="BDO.jpg" />
+    <img title="NH" src="nh.png"   />
+	</div>	
     <div data-role="navbar">
       <ul>
         <li><a href="#home" data-icon="home">Home</a></li>
@@ -314,7 +433,12 @@ Omdat KasCo online facturatie, incasso en juridische dienstverlening combineert,
 		<p><a href="index.html" title="Reset">Reset</a></p>
 	</div>
 
-  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">		
+  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">	
+    	<div style='background: white'>
+    <img title="ING" src="ING.jpg" />
+    <img title="BDO" src="BDO.jpg" />
+    <img title="NH" src="nh.png"   />
+	</div>		
     <div data-role="navbar">
       <ul>
         <li><a href="#home" data-icon="home">Home</a></li>
@@ -328,15 +452,18 @@ Omdat KasCo online facturatie, incasso en juridische dienstverlening combineert,
 <script type="text/javascript">
 
 // als al ingegeschreven dan naar hoofdpagina
-// TODO: reset localStorage page
-//$("#signup").bind("pageinit", function() {
+$("#signup").bind("pageinit", function() {
 //  if(localStorage.getItem("fname")!=null &&
 //     localStorage.getItem("lname")!=null &&
 //     localStorage.getItem("email")!=null
 //   ) {
 //    $.mobile.changePage( "#home", { transition: "none" } );
 //  }
-//});
+
+  if(readCookie("filledin")) {
+    $.mobile.changePage( "#home", { transition: "none" } );
+  }
+});
 
 // alles ingevuld bij inschrijven?
 $("#signup_button").click(function() {
@@ -354,6 +481,7 @@ $("#signup_button").click(function() {
     localStorage.setItem( "fname", $( "#voornaam" ).val() );
     localStorage.setItem( "lname", $( "#achternaam" ).val() );
     localStorage.setItem( "email", $( "#emailadres" ).val() );
+    createCookie("filledin", "true", 1);
     $.mobile.changePage(  "#home", { transition: "slide" } );
   }
   
@@ -369,7 +497,9 @@ $("#choose-investment, #over-25k, #vote").bind("pageinit", function() {
 
 // als startup gekozen dan opslaan 
 $("a[href='#choose-investment']").click( function(){
-  var startup = $(this).parents(".startup-info").first().attr("id");
+  //var startup = $(this).parents(".startup-info").first().attr("id");
+  var startup = this.getAttribute("data-gitrid");
+  console.log(startup);
   localStorage.setItem( "startup", startup );
 });
 
@@ -381,7 +511,9 @@ $(".vote-link").click( function() {
 $("#share-u").click(function() {
   var shares = $("#00NF00000064HV4");
   shares.val(parseInt(shares.val())+20);
-  var percentage = parseInt(shares.val())/10000 * 100;
+  var startup = localStorage.getItem("startup");
+  var max = startupinfo[startup];
+  var percentage = parseInt(shares.val())/max * 100;
   $("#shares-percentage").text(percentage.toPrecision(3));
 });
 
@@ -391,7 +523,10 @@ $("#share-d").click(function() {
   if (parseInt(shares.val())<20) {
     shares.val("20");
    }
-  var percentage = parseInt(shares.val())/10000 * 100;
+   
+  var startup = localStorage.getItem("startup");
+  var max = startupinfo[startup];
+  var percentage = parseInt(shares.val())/max * 100;
   $("#shares-percentage").text(percentage.toPrecision(3));
 });
 
@@ -405,35 +540,42 @@ $("#00NF00000064HV4").change( function() {
       Math.ceil(parseInt(shares.val())/20)*20
     );
    }
-   
-  var percentage = parseInt(shares.val())/10000 * 100;
+  var startup = localStorage.getItem("startup");
+  var max = startupinfo[startup];
+  var percentage = parseInt(shares.val())/max * 100;
+  console.log(max);
   $("#shares-percentage").text(percentage.toPrecision(3));
 
 });
 
+var startupinfo = { "Beebox" : 2030000 ,
+                    "4328-maak-een-boeket-online": 350000 ,
+                    "4464-kasco-goed-voor-elkaar"  : 750000 }
 
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
 
-//$("#invest").bind("pageinit", function() {
-//  $(".startup-info").each( function() {
-//  	$.getJSON('api.php', {id: this.id}, function(json) {
-      //amount of investors
-      //$(this).find(".investors_amount").html(json.idea.idea_investors.amount);
-      //investment required;
-      //$(this).find(".target_funding").html("&euro;"+ json.idea.target_funding);
-      //current investments;
-      //$(this).find(".invested_funding").html("&euro;"+ json.idea.invested_funding);
-      //days remaining till deadline
-      //$(this).find(".days_till_deadline").text(json.idea.days_till_deadline);
-      //progress
-      //var  progress = Math.round((json.idea.invested_funding / json.idea.target_funding) * 100);
-      //$(this).find(".equity_percentage").text(progress+"%");
-      //$(this).find(".progress").css("width", progress+"%");
-      //$(this).find(".equity_inner_container").css("width", progress+"%");
-//    });
-//  });
-//});
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
 
-//replace(/\W+/g,"-");
+function eraseCookie(name) {
+	createCookie(name,"",-1);
+}
 </script>
 </body>
 </html>

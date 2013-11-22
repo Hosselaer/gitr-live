@@ -317,7 +317,7 @@
           <a href="#" data-role="button" data-icon="arrow-u" data-iconpos="notext" id="share-u">Add share</a>
         </div>
         <div>
-          <label style="display: inline;" for="00NF00000064HV4">€</label> <!-- 00NF00000064HV4 = GITR invest euro amount -->
+          <label style="display: inline;" for="00NF00000064HV4">â‚¬</label> <!-- 00NF00000064HV4 = GITR invest euro amount -->
           <!-- niet meer dan 93% --> 
           <input style="display: inline; width: 93%;" data-theme="b" type="number" name="00NF00000064HV4" id="00NF00000064HV4" placeholder="please fill in an amount" value="20" min="20" max="25000"/>
         </div>
@@ -425,13 +425,6 @@
 
 // als al ingegeschreven dan naar hoofdpagina
 $("#signup").bind("pageinit", function() {
-//  if(localStorage.getItem("fname")!=null &&
-//     localStorage.getItem("lname")!=null &&
-//     localStorage.getItem("email")!=null
-//   ) {
-//    $.mobile.changePage( "#home", { transition: "none" } );
-//  }
-
   if(readCookie("filledin")) {
     $.mobile.changePage( "#home", { transition: "none" } );
   }
@@ -469,6 +462,13 @@ $("#choose-investment, #over-25k, #vote").bind("pageinit", function() {
 
 $("#voted").bind("pageinit", function() { 
 	$("a[href='#vote'], #vote-list").addClass('ui-disabled');
+	localStorage.setItem("voted", true);
+});
+
+$( document ).bind( "pageload", function( event, data ){
+	if(localStorage.getItem("voted") {
+		$("a[href='#vote'], #vote-list").addClass('ui-disabled');
+	}
 });
 
 // als startup gekozen dan opslaan 

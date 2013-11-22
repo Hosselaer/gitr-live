@@ -425,6 +425,13 @@
 
 // als al ingegeschreven dan naar hoofdpagina
 $("#signup").bind("pageinit", function() {
+//  if(localStorage.getItem("fname")!=null &&
+//     localStorage.getItem("lname")!=null &&
+//     localStorage.getItem("email")!=null
+//   ) {
+//    $.mobile.changePage( "#home", { transition: "none" } );
+//  }
+
   if(readCookie("filledin")) {
     $.mobile.changePage( "#home", { transition: "none" } );
   }
@@ -462,13 +469,6 @@ $("#choose-investment, #over-25k, #vote").bind("pageinit", function() {
 
 $("#voted").bind("pageinit", function() { 
 	$("a[href='#vote'], #vote-list").addClass('ui-disabled');
-	localStorage.setItem("voted", true);
-});
-
-$( document ).bind( "pageload", function( event, data ){
-	if(localStorage.getItem("voted") {
-		$("a[href='#vote'], #vote-list").addClass('ui-disabled');
-	}
 });
 
 // als startup gekozen dan opslaan 

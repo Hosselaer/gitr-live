@@ -93,6 +93,7 @@
       <!-- id van div moet hetzelfde zijn als op symbid.nl -->
       <div data-role="collapsible" id="4792-declaree-app-voor-bonnetjes" data-theme="a" class="startup-info">
       <h3 class="startup-title" data-theme="a">Declaree</h3>
+      <img  style="float: left; margin: 1.2em 2em 2em 0;" src="declaree.png" title="Declaree logo" />
       <p>Sick and tired of keeping track of receipts? Digitalize them on the go with Declaree, 
       the Expense Management solution that tracks receipts using a mobile app available for 
       iPhone and Android. All receipts are stored in the secure Declaree webapplication which 
@@ -104,6 +105,7 @@
       
       <div data-role="collapsible" id="4464-kasco-goed-voor-elkaar" data-theme="a" class="startup-info">
       <h3 class="startup-title" data-theme="a">KasCo</h3>
+      <img  style="float: left; margin: 1.2em 2em 2em 0;" src="kasco.jpg" title="KasCo logo" />
       <p>KasCo is the new collaborative way of billing! 
       KasCo does not believe in unfriendly payment 
       reminders but in a cooperative way of billing where 
@@ -118,7 +120,8 @@
       
       <div data-role="collapsible" data-theme="a">
       <h3 class="startup-title" id="4328-maak-een-boeket-online" data-theme="a" class="startup-info">Bloomy Floral Creations</h3>
-      <p>Bloomy Creations is the first and only company in the world that allows
+      <img style="float: left; margin: 1.2em 2em 2em 0;" src="bloomy.jpg" title="Bloomy logo"/>
+      <p >Bloomy Creations is the first and only company in the world that allows
        consumers to manually choice each flower in a bouquet and have it delivered
         on their doorstep! Compose your own bouquet, get inspired by others or select
          the favorite flowers of the receiver? You choose your flowers, your color, 
@@ -158,12 +161,12 @@
 
 	<div data-role="content" data-theme="a">	
 		<p class="intro">Please select the option you want to vote for</p><br>
-		<ul data-role="listview" data-theme="a">
-      <li><a href="#" class="vote-link" data-transition="slide">Winner: Smadex/Playir</a></li>
-      <li><a href="#" class="vote-link" data-transition="slide">Winner: Jinvator/Mindful Scientific</a></li>
-      <li><a href="#" class="vote-link" data-transition="slide">Winner: Hutgrip/Truckbird</a></li>
-      <li><a href="#" class="vote-link" data-transition="slide">Winner Battle JackSavior/Eyeverify</a></li>
-    </ul>
+		<ul data-role="listview" data-theme="a" id="vote-list">
+		  <li><a href="#" class="vote-link" data-transition="slide">Winner: Smadex/Playir</a></li>
+		  <li><a href="#" class="vote-link" data-transition="slide">Winner: Jinvator/Mindful Scientific</a></li>
+		  <li><a href="#" class="vote-link" data-transition="slide">Winner: Hutgrip/Truckbird</a></li>
+		  <li><a href="#" class="vote-link" data-transition="slide">Winner Battle JackSavior/Eyeverify</a></li>
+		</ul>
     <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" data-theme="a" id="voting-form">
       <input type=hidden name="oid" value="00DA0000000amZU" >
       <input type=hidden name="retURL" value="http://www.livegitr.nl/#voted">
@@ -256,37 +259,6 @@
   
 </div>
 
-<!----------------------------------------------------------------------------->
-
-<div data-role="page" id="invested" data-theme="a">
-
-	<div data-role="header" data-theme="a">
-		<h1>INVESTED</h1>
-	</div>
-
-	<div data-role="content" data-theme="a">	
-		<p class="intro">Thank you!</p>
-		<p>An email has been sent to your account. Click on the link in this email to finish the payment.</p>
-		<p>Why not also invest in another startup?</p>
-		<a href="#invest" data-role="button" data-theme="a" data-transition="slide">Invest more</a>
-	</div>
-
-  <div data-role="footer" data-id="home" data-position="fixed" data-theme="a">
-    	<div style='background: white'>
-    <img title="ING" src="ING.jpg" />
-    <img title="BDO" src="BDO.jpg" />
-    <img title="NH" src="nh.png"   />
-	</div>			
-    <div data-role="navbar">
-      <ul>
-        <li><a href="#home" data-icon="home">Home</a></li>
-        <li><a href="#invest" data-icon="arrow-d" class="ui-btn-active ui-state-persist">Invest</a></li>
-        <li><a href="#vote" data-icon="check">Vote</a></li>
-      </ul>
-    </div>
-  </div>
-  
-</div>
 
 <!----------------------------------------------------------------------------->
 
@@ -345,7 +317,7 @@
           <a href="#" data-role="button" data-icon="arrow-u" data-iconpos="notext" id="share-u">Add share</a>
         </div>
         <div>
-          <label style="display: inline;" for="00NF00000064HV4">â‚¬</label> <!-- 00NF00000064HV4 = GITR invest euro amount -->
+          <label style="display: inline;" for="00NF00000064HV4">€</label> <!-- 00NF00000064HV4 = GITR invest euro amount -->
           <!-- niet meer dan 93% --> 
           <input style="display: inline; width: 93%;" data-theme="b" type="number" name="00NF00000064HV4" id="00NF00000064HV4" placeholder="please fill in an amount" value="20" min="20" max="25000"/>
         </div>
@@ -495,6 +467,10 @@ $("#choose-investment, #over-25k, #vote").bind("pageinit", function() {
   $("input[name='00NF00000064HV9']").val( localStorage.getItem( "startup" ) );
 });
 
+$("#voted").bind("pageinit", function() { 
+	$("a[href='#vote'], #vote-list").addClass('ui-disabled');
+});
+
 // als startup gekozen dan opslaan 
 $("a[href='#choose-investment']").click( function(){
   //var startup = $(this).parents(".startup-info").first().attr("id");
@@ -548,7 +524,7 @@ $("#00NF00000064HV4").change( function() {
 
 });
 
-var startupinfo = { "Beebox" : 2030000 ,
+var startupinfo = { "4792-declaree-app-voor-bonnetjes" :  800000 ,
                     "4328-maak-een-boeket-online": 350000 ,
                     "4464-kasco-goed-voor-elkaar"  : 750000 }
 
